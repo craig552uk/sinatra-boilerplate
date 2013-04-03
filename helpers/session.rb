@@ -4,6 +4,7 @@ module Session
 
   def current_user
     session_key = session[:user_key] || request.cookies['user_key'] || 'xxx'
+    return nil if 'xxx' == session_key
     @current_user ||= User.find_by_session_key session_key
   end
 
