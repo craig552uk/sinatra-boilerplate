@@ -37,11 +37,11 @@ namespace :irb do
 
   desc 'Start interactive ruby loading models'
   task :models do
-    system "irb -I ./application/models -r 'init.rb'"
+    system "irb -I ./models -r 'init.rb'"
   end
 
   desc 'Start interactive ruby loading models'
   task :controllers do
-    system "irb -I ./application/controllers -r 'init.rb'"
+    system "irb -I ./controllers -r 'init.rb'"
   end
 end
