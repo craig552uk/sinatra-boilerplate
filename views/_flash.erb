@@ -1,0 +1,8 @@
+<div id="alerts">
+  <% flash.each do |id,alert| %>
+    <div id="alert-<%= id %>" class="alert fade in <%= alert[:classes].join(' ') %>">
+      <a href="#" class="close" data-dismiss="alert">&times;</a>
+      <%= alert[:msg] %>
+    </div>
+  <% end %>
+</div>

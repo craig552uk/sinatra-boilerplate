@@ -1,0 +1,20 @@
+<% if 'development' == ENV['RACK_ENV'] %>
+
+  <div id="debug-block" style="display:none">
+    <pre><code>PARAMS       <%= params.to_yaml       %></code></pre>
+    <pre><code>FLASH        <%= flash.to_yaml        %></code></pre>
+    <pre><code>ENVIRONMENT  <%= ENV.to_hash.to_yaml  %></code></pre>
+  </div>
+
+  <script type="text/javascript">
+    (function(){
+      var t = document.getElementById('debug-toggle'),
+          d = document.getElementById('debug-block');
+      t.onclick = function(){
+        d.style.display = (d.style.display == "none") ? "block" : "none";
+        return false;
+      }
+    })();
+  </script>
+
+<% end %>

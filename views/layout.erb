@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= title %></title>
+
+    <meta charset="utf-8">
+    <meta name="description" content="<%= description %>">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  </head>
+  <body>
+    <div class="container">
+
+      <section rel="main">
+        <%= erb :_flash %>
+        <%= yield %>
+      </section>
+
+      <footer class="page-footer">
+        <ul class="inline muted">
+          <li>&copy; 2013 <a href="http://craig-russell.co.uk">Craig Russell</a></li>
+          <% if development? %>| <li><a href="" id="debug-toggle">Debug</a></li><% end %>
+        </ul>
+      </footer>
+
+      <%= erb :_debug %>
+    </div>
+
+    <script src="/js/jquery-1.9.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/script.js"></script>
+    <%= javascript %>
+  </body>
+</html>

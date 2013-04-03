@@ -1,0 +1,3 @@
+(function(d, undefined){
+
+})(document)
